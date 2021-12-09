@@ -123,6 +123,7 @@ btn_submit.onclick = function(e){
     else{
         // Lấy được data khi nhập
         console.log(listForm);
+        alert("Đang update: Bạn đã đăng kí thành công, dữ liệu được hiển thị ở console");
     }
 }
 
