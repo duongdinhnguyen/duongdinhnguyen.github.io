@@ -88,7 +88,8 @@ var cd = document.querySelector(".cd-img");
 var cd_Music = document.querySelector(".cd-music");
 var cd_Height = cd_Music.offsetHeight;
 var play_list = document.querySelector(".music-lists");
-
+var icon_down = document.querySelector("#icon-down");
+var icon_add = document.querySelector("#icon-add");
 
 function showCD(index){
     header_songName.textContent = songs[index].song_name;
@@ -121,7 +122,9 @@ function show_Song(){
     
 }
 
-
+function updateNotification(icon){
+    console.log(icon);
+}
 function go_round_CD(){
     gr_CD = cd.animate([{ transform: 'rotate(360deg)' }],
      {duration: 30000,iterations: Infinity}); 
@@ -246,23 +249,9 @@ function tuaSong(){
     
 }
 
-
-function start(){
-
-    // show song inital
-    showCD(initialIndex);
-
-    // show play list music
-    show_Song();
-
-    //chuyển bài khi click
-    // bắt event khi click element nằm trong thẻ bọc nó
-    // dùng cách này thì sẽ bắt đc toàn bộ các element trong nó
-    // kể cả các element sau khi chỉnh sửa, update, add, remove,..
-    play_list.onclick = function(e){
-        
-        //e.target => trả về hiện tại
-        // trả về phần tử có class là gì đó
+function clickSelectSong(e){
+    //e.target => trả về hiện tại
+        // trả về phần tử có class là gì đó khi click trúng
         var music_item = e.target.closest(".music-item");
         var details = e.target.closest(".details");
         // nếu click trúng music_item và không trúng details
@@ -283,6 +272,30 @@ function start(){
         if(details){
             console.log("yeag");
         }
+}
+function start(){
+
+    // show song inital
+    showCD(initialIndex);
+
+    // show play list music
+    show_Song();
+
+
+    icon_down.onclick = function(e){
+        alert("Đang cập nhật");
+    };
+
+    icon_add.onclick = function(e){
+        alert("Đang cập nhật");
+    };
+    //chuyển bài khi click
+    // bắt event khi click element nằm trong thẻ bọc nó
+    // dùng cách này thì sẽ bắt đc toàn bộ các element trong nó
+    // kể cả các element sau khi chỉnh sửa, update, add, remove,..
+    play_list.onclick = function(e){
+        clickSelectSong(e);
+        
     };
 
     //zoom out CD when scroll: use window.scrollY 
