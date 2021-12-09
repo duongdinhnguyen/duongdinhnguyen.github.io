@@ -1,0 +1,162 @@
+
+.main{
+    position: fixed;
+    top:0;
+    z-index: 1;
+    background: url("../image/background_img/background_img_004.jpg")center /cover no-repeat;
+    padding: 0 1.2rem;
+    box-shadow: 0 1px 5px 1px rgba(189, 154, 161, 0.5);
+    border-radius: 2px;
+    max-width: 73.99rem;
+    
+}
+/* Dùng lớp giả để set background-img của main */
+/* .main::after{
+    content: ""; không đc thiếu 
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url("../image/background_img/background_img_004.jpg") top center /cover no-repeat; cover: chiều ngang = width
+    opacity: 1;
+    z-index: -1;
+} */
+.main-music{
+    width: 35.1rem;
+    padding: 1.2rem;
+
+}
+
+.header-music{
+    display: flex;
+    justify-content: space-between;
+    height : 60px;
+    align-items: center;
+}
+.name-music{
+    text-align: center;
+    font-family: var(--font-text);
+    font-size: var(--font-size);
+}
+.name-music p{
+    color: var(--color-icon);
+}
+.name-music h3{
+    opacity: 0.9;
+}
+
+.cd-music{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-out;
+}
+
+.cd-img{
+    width: 10rem;
+    height: 10rem;
+    background: center /cover no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px #000;
+    animation: cd-animation 0.3s ease-out;
+
+}
+
+.operation-music ul{
+    height: 40px;
+    width: 32.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.operation-music ul li{
+    color: var(--color-text);
+    font-size: var(--size-xl);
+}
+.pause-item{
+    color: var(--color-icon)!important;
+    font-size: 32px!important ;
+}
+.random-active{
+    color :aqua !important ;
+}
+.audio-music{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.audio-music .audio-item{
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    background: var(--background-color);
+    
+}
+.audio-music .audio-item::-webkit-slider-thumb {
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+/* CSS musics start */
+.musics{
+    margin-top: 354px;
+    width: 37.5rem;
+    background-color: var(--background-color);
+    padding: 2rem 1.2rem;
+    
+}
+
+
+.musics .music-item{
+    width: 35.1rem;
+    height: 80px;
+    background-color: var(--white-color);
+    list-style: none;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(189, 154, 161, 0.5);
+    padding: 1rem 2rem;
+}
+.song-active{
+    background-color: bisque !important ;
+}
+.music-item .music-item-content{
+    display: flex;
+    height: 60px;
+    font-size: var(--size-l);
+    align-items: center;
+    justify-content: space-evenly;
+}
+.music-item .music-item-img{
+    width: 5.2rem;
+    height: 52px;
+    margin-right: 2.4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px #000;
+    background:center /cover no-repeat;
+
+}
+
+.music-item .music-item-description{
+    width: 19.5rem;
+    font-family: var(--font-text);
+    font-weight:400;
+}
+.music-item .details{
+    width: 40px;
+    text-align: center;
+}
+.music-item i,p{
+    color: var(--color-text);
+
+}
+.music-item i{
+    font-size: var(--size-xxl);
+}
+/* CSS musics end. */
